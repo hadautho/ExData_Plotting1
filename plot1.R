@@ -1,0 +1,5 @@
+proj1 <- read.table("household_power_consumption.txt", skip = 66637, nrow = 2880, sep = ";")
+colnames(proj1) <- c("Date","Time","Global_active_power","Global_reactive_power","Voltage","Global_intensity","Sub_metering_1","Sub_metering_2","Sub_metering_3")
+png(filename="plot1.png")
+hist(proj1$Global_active_power, freq = TRUE, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
+dev.off()
